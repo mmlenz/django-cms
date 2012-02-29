@@ -28,5 +28,3 @@ from cms.tests.toolbar import *
 from cms.tests.urlutils import *
 from cms.tests.views import *
 from cms.tests.management import *
-from cms.tests.menu_page_viewperm import *
-from cms.tests.menu_page_viewperm_staff import *

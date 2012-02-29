@@ -55,8 +55,7 @@ def post_patch_check():
             continue
         if not validate_template(template[0], ['js', 'css']):
             raise ImproperlyConfigured(
-                "The 'js' and 'css' sekizai namespaces must be present in each template, "
-                "- or a template it inherits from - defined in CMS_TEMPLATES. "
-                "I can't find the namespaces in %r."
+                "All templates defined in CMS_TEMPLATES must have at least the "
+                "'js' and 'css' sekizai namespaces. The template %r does not. "
                 % template[0]
             )

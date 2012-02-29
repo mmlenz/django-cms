@@ -7,6 +7,8 @@ from django.forms.widgets import Media
 from django.utils.translation import ugettext_lazy as _
 import operator
 
+
+
 class Placeholder(models.Model):
     slot = models.CharField(_("slot"), max_length=50, db_index=True, editable=False)
     default_width = models.PositiveSmallIntegerField(_("width"), null=True, editable=False)
@@ -20,15 +22,9 @@ class Placeholder(models.Model):
     def get_add_url(self):
         return self._get_url('add_plugin')
     
-    def get_move_url(self):
-        return self._get_url('move_plugin')
-        
-    def get_remove_url(self):
-        return self._get_url('remove_plugin')
-                
     def get_changelist_url(self):
         return self._get_url('changelist')
-        
+    
     def _get_url(self, key):
         model = self._get_attached_model()
         if not model:
@@ -124,6 +120,7 @@ class Placeholder(models.Model):
         Returns a list of models of attached to this placeholder.
         """
         return [field.model for field in self._get_attached_fields()]
+        
 
     def get_plugins_list(self):
         return list(self.get_plugins())

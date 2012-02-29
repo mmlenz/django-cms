@@ -21,7 +21,6 @@ class PagePermissionInlineAdmin(admin.TabularInline):
     form = PagePermissionInlineAdminForm
     classes = ['collapse', 'collapsed']
     exclude = ['can_view']
-    extra = 0 # edit page load time boost
     
     def queryset(self, request):
         """
@@ -68,7 +67,7 @@ class PagePermissionInlineAdmin(admin.TabularInline):
         return formset_cls
 
 class ViewRestrictionInlineAdmin(PagePermissionInlineAdmin):
-    extra = 0 # edit page load time boost
+    extra = 1
     form = ViewRestrictionInlineAdminForm
     verbose_name = _("View restriction")
     verbose_name_plural = _("View restrictions")

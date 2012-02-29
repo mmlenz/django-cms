@@ -1289,7 +1289,7 @@ msgstr "Impostazioni colore"
 
 #: plugins/video/models.py:9
 msgid "movie file"
-msgstr "file video"
+msgstr "richiesta di spostamento"
 
 #: plugins/video/models.py:9
 msgid "use .flv file or h264 encoded video file"
@@ -1297,7 +1297,7 @@ msgstr "Usa file un file video .flv o codificato h264"
 
 #: plugins/video/models.py:10
 msgid "movie url"
-msgstr "indirizzo video"
+msgstr "richiesta di modifica"
 
 #: plugins/video/models.py:10
 #, fuzzy
